@@ -5,7 +5,17 @@ class Wonder:
         len_word = len(word)
         print(len_word)
 
-    # def empty_cell(self, len_cell):
-    #     for i in range()
+        def empty_cell(self, len_cell):
+            for i in range(len_cell):
+                print("___ ", end="")
+            print("")
+            for i in range(len_cell):
+                print("| | ", end="")
+            print("")
+            for i in range(len_cell):
+                print("--- ", end="")
 
-o = Wonder("чудо")
+        empty_cell(self, len_word)
+
+
+o = Wonder("чудоkkk")
