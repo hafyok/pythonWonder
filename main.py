@@ -1,10 +1,14 @@
+import random
+
+
 class Wonder:
-    words_all = ["Чудо", "Поле"]
+    words_all = ["Чудо", "Поле", "МИРЭА", "Чупакабра", "Valorant"]
     done_letters = []
     word = ""
     letter = " "
 
-    def __init__(self, word):
+    def __init__(self):
+        word = random.choice(self.words_all)
         len_word = len(word)
         self.word = word
         self.done_letters = [0] * len_word
@@ -45,4 +49,4 @@ class Wonder:
 
 
 
-o = Wonder("Чудо")
+o = Wonder()
