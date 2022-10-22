@@ -7,6 +7,7 @@ class Wonder:
         len_word = len(word)
         self.word = word
         self.empty_cell(len_word)
+        self.input_letter()
 
 
     def empty_cell(self, len_cell):
@@ -14,26 +15,30 @@ class Wonder:
             print("___ ", end="")
         print("")
         for i in range(len_cell):
-            print("|" + self.letter + "| ", end="")
+            if self.letter == self.word[i]:
+                print("|" + self.letter + "| ", end="")
+            else:
+                print("| | ",end="")
         print("")
         for i in range(len_cell):
             print("--- ", end="")
         print("")
+        self.input_letter()
 
 
 
     def input_letter(self):
         letter = input()
-        if letter == self.word[0]:
+        if letter in self.word:
             self.letter = letter
             self.empty_cell(len(self.word))
             print("верно")
         else:
             print("неверно")
+        self.empty_cell(len(self.word))
 
 
 
 
 
 o = Wonder("Чудо")
-o.input_letter()
